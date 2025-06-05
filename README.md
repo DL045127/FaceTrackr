@@ -4,5 +4,5 @@ Face tracking desktop app built to maximize screen productivity by tracking face
 
 ## Tech Stack:
 
-Frontend: React + Vite + TailwindCSS
+Frontend: React + Vite + TailwindCSS <br/>
 Backend: Flask + OpenCV
