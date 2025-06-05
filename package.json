@@ -1,0 +1,51 @@
+{
+  "name": "my-app",
+  "productName": "my-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm:flask\" \"npm:vite\"",
+    "flask": "\"backend\\venv\\Scripts\\python.exe\" backend\\server.py",
+    "vite": "vite",
+    "electron-forge": "wait-on http://localhost:5173 && electron-forge start",
+    "build": "vite build",
+    "start": "concurrently \"npm:vite\" \"electron-forge start\"",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Derick Lee",
+    "email": "dlee12105@utexas.edu"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "electron-squirrel-startup": "^1.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@vitejs/plugin-react": "^4.5.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "electron": "36.3.2",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
+    "vite": "^6.3.5",
+    "wait-on": "^8.0.3"
+  }
+}
